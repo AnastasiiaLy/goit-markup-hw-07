@@ -362,8 +362,9 @@ body {
 /* ==============HERO SECTION============== */
 
 .hero-section {
-	height: 432px;
 	max-width: 428px;
+	height: 432px;
+
 	margin-left: auto;
 	margin-right: auto;
 
@@ -373,7 +374,6 @@ body {
 	background-position: center;
 	background-size: cover;
 
-	padding-top: 112px;
 	padding-bottom: 240px;
 	text-align: center;
 }
@@ -381,13 +381,16 @@ body {
 .hero {
 	font-family: "Roboto";
 	font-weight: 700;
-	font-size: 56px;
+	font-size: 36px;
 	line-height: 1.02;
 	text-align: center;
 	letter-spacing: 0.02em;
 	color: #ffffff;
+
 	margin: 0 auto;
-	margin-bottom: 40px;
+	padding-top: 112px;
+	margin-bottom: 72px;
+	width: 350px;
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -410,7 +413,7 @@ body {
 		padding-bottom: 204px;
 	}
 	.hero {
-		width: 500px;
+		width: 350px;
 	}
 }
 

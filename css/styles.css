@@ -520,6 +520,7 @@ body {
 .advantages-list {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -720,6 +721,8 @@ body {
 .customers-list {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .customers-list-item:nth-child(odd) {

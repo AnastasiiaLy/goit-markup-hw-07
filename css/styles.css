@@ -597,7 +597,7 @@ body {
 }
 
 /* ==============OUR WORKS============== */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
 	.exapmles-of-work {
 		display: none;
 	}
@@ -605,7 +605,7 @@ body {
 		display: none;
 	}
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1199px) {
 	.work-list {
 		display: flex;
 	}
@@ -626,6 +626,13 @@ body {
 .team-list {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.team-list-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .team-list .team-list-item + .team-list-item {
 	margin-top: 72px;
@@ -641,9 +648,6 @@ body {
 	}
 }
 
-/* .team-list .photo {
-	margin-bottom: 32px;
-} */
 .team-list .worker {
 	margin-bottom: 8px;
 }
@@ -715,7 +719,14 @@ body {
 
 .customers-list {
 	display: flex;
-	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.customers-list-item:nth-child(odd) {
+	margin-right: 16px;
+}
+.customers-list-item:nth-child(-n + 4) {
+	margin-bottom: 72px;
 }
 .customers-link {
 	display: flex;

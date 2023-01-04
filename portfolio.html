@@ -15,18 +15,25 @@
 		<title>Portfolio</title>
 	</head>
 	<body>
-		<header class="page-header">
+	<header class="page-header">
 			<div class="container header">
 				<a href="./index.html" class="logo link">web<span class="part-logo">studio</span></a>
-				<nav>
+				<nav class="navigation-menu-tablet">
 					<ul class="navigation-list list">
-						<li class="navigation-list-item active"><a href="./index.html" class="navigation link">Studio</a></li>
 						<li class="navigation-list-item active"
-							><a href="./portfolio.html" class="navigation current-page link">Portfolio</a></li
+							><a href="./index.html" class="navigation current-page link">Studio</a></li
 						>
-						<li class="navigation-list-item active"><a href="" class="navigation link">Contacts</a></li>
+						<li class="navigation-list-item active"
+							><a href="./portfolio.html" class="navigation-menu link">Portfolio</a></li
+						>
+						<li class="navigation-list-item active"><a href="" class="navigation-menu link">Contacts</a></li>
 					</ul>
 				</nav>
+				<button type="button" class="mobile-menu-open-btn js-open-menu">
+					<svg class="mobile-menu-open-icon" width="32" height="22">
+						<use href="./images/icons.svg#icon-burger"></use>
+					</svg>
+				</button>
 
 				<!--Contacts-->
 				<ul class="contact-list list">
@@ -34,9 +41,71 @@
 					<li class="item"><a href="tel:+110001111111" class="contact-item link">+11 (000) 111-11-11</a></li>
 				</ul>
 			</div>
+			<!-- /* ==============MOBILE MENU============== */ -->
+			<div class="mobile-menu js-menu-container">
+				<div class="container-mobile-menu container">
+					<button type="button" class="mobile-menu-close-btn js-close-menu">
+						<svg class="mobile-menu-close-btn-icon" width="8" height="8">
+							<use href="./images/icons.svg#icon-close-modal"></use>
+						</svg>
+					</button>
+					<ul class="mobile-menu-pages-list list">
+						<li class="mobile-menu-pages-list-item">
+							<a href="./index.html" class="mobile-menu-pages-list-link link">Studio</a>
+						</li>
+						<li class="mobile-menu-pages-list-item">
+							<a href="./portfolio.html" class="mobile-menu-pages-list-link link">Porfolio</a>
+						</li>
+						<li class="mobile-menu-pages-list-last-item">
+							<a href="#" class="mobile-menu-pages-list-link link">Contacts</a>
+						</li>
+					</ul>
+
+					<div class="contacts-and-media-list ">
+						<ul class="mobile-menu-contacts-list list">
+							<li class="mobile-menu-contacts-first-list-item">
+								<a href="tel:+110001111111" class="mobile-menu-contact-item link">+11 (000) 111-11-11</a>
+							</li>
+							<li class="mobile-menu-contacts-list-item">
+								<a href="mailto:info@devstudio.com" class="mobile-menu-mail-item link">info@devstudio.com</a>
+							</li>
+						</ul>
+						<ul class="menu-social-media-list list">
+							<li class="menu-social-media-list-item">
+								<a href="" class="menu-social-media-list-item-link link">
+									<svg class="menu-social-media-list-item-icon" width="24" height="24">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="menu-social-media-list-item">
+								<a href="" class="menu-social-media-list-item-link link">
+									<svg class="menu-social-media-list-item-icon" width="24" height="24">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="menu-social-media-list-item">
+								<a href="" class="menu-social-media-list-item-link link">
+									<svg class="menu-social-media-list-item-icon" width="24" height="24">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="menu-social-media-list-item">
+								<a href="" class="menu-social-media-list-item-link link">
+									<svg class="menu-social-media-list-item-icon" width="24" height="24">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</header>
 		<main>
-			<section class="portfolio-section">
+			<!-- <section class="portfolio-section">
 				<div class="container">
 					<h1 class="visually-hidden">Filters</h1>
 					<ul class="filters list">
@@ -184,19 +253,20 @@
 						</li></ul
 					>
 				</div>
-			</section>
+			</section> -->
+			<script src="./js/mobile-menu.js"></script>
 		</main>
 		<!--Footer-->
 		<footer class="footer">
 			<div class="container">
-				<div class="footer-containter">
+				<!-- <div class="footer-containter">
 					<div>
 						<a href="/index.html" class="webstudio link">web<span class="footer-studio">studio</span></a>
 						<p class="footer-description">
 							Increase the flow of customers and sales for your business with digital marketing & growth solutions.
 						</p>
-					</div>
-					<div class="footer-social-media">
+					</div> -->
+					<!-- <div class="footer-social-media">
 						<h2 class="list-header">Social media</h2>
 						<ul class="social-list list">
 							<li class="social-list-item">
@@ -228,14 +298,14 @@
 								</a>
 							</li>
 						</ul>
-					</div>
-					<div class="subscription-btn">
+					</div> -->
+					<!-- <div class="subscription-btn">
 						<b class="subscribe">Subscribe</b>
 						<form class="footer-submit-form">
 							<input type="mail" class="submit-form-input" name="user-email " placeholder="E-mail" />
 							<button type="submit" class="submit-form-btn"> Subscribe </button>
 						</form>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</footer>

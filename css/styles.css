@@ -65,7 +65,7 @@ body {
 	padding-top: 96px;
 	padding-bottom: 96px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
 	.section {
 		padding-top: 120px;
 		padding-bottom: 120px;
@@ -680,7 +680,7 @@ body {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-/* Employee-Social-Madia-List */
+/* ==============EMPLOYEES SOCIAL MEDIA LIST============== */
 .employee-social-list {
 	display: flex;
 	justify-content: center;
@@ -707,7 +707,7 @@ body {
 .employee-social-list-icon {
 	fill: var(--background-color);
 }
-/* Our Customers */
+/* ==============OUR CUSTOMERS============== */
 
 .customers {
 	margin-bottom: 72px;
@@ -725,9 +725,19 @@ body {
 	align-items: center;
 }
 
-.customers-list-item:nth-child(odd) {
-	margin-right: 16px;
+.customers-list-item {
+	flex-basis: calc((100%-2 * 8) / 2);
+	width: 8px;
 }
+
+@media screen and (min-width: 768px) {
+	.customers-list-item {
+		flex-basis: calc((100%-3 * 16) / 3);
+	}
+}
+/* .customers-list-item:nth-child(odd) {
+	margin-right: 16px;
+} */
 .customers-list-item:nth-child(-n + 4) {
 	margin-bottom: 72px;
 }
@@ -758,14 +768,23 @@ body {
 	transition: fill var(--transition-dur-and-func);
 }
 
-/* Footer */
+/* ==============FOOTER============== */
 .footer-containter {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-.footer {
+@media screen and (min-width: 768px) {
+	.footer-containter {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+/* .footer {
 	padding-top: 100px;
 	padding-bottom: 100px;
-}
+} */
 .footer-social-media {
 	margin-left: 120px;
 }
@@ -777,10 +796,16 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 }
-/* Logo */
+/* ==============LOGO-FOOTER============== */
+@media screen and (max-width: 767px) {
+	.webstudio {
+		margin-left: auto;
+	}
+}
 .webstudio {
-	display: block;
-	/* margin-top: 100px; */
+	display: flex;
+	margin-right: auto;
+
 	margin-bottom: 16px;
 
 	font-family: "Raleway", sans-serif;
@@ -790,30 +815,75 @@ body {
 	text-transform: uppercase;
 	color: inherit;
 }
-.footer-studio {
-	color: var(--background-color);
-}
 
-.footer {
-	background-color: var(--secondary-color);
-}
-
+/* .footer-logo-part {
+	display: flex;
+	flex-direction: column;
+	margin-right: auto;
+	margin-left: auto;
+} */
 .footer-description {
 	font-size: 16px;
 	line-height: 1.5;
 	color: var(--accent-color);
 	width: 264px;
 }
+.footer {
+	background-color: var(--secondary-color);
+}
+.footer-studio {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	color: var(--background-color);
+}
 
-/* Footer list of Social Media */
+.footer-containter {
+	display: flex;
+	align-content: flex-start;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+	.footer-logo-part {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+.footer-logo-part {
+	display: flex;
+	flex-direction: column;
+
+	margin-bottom: 72px;
+}
+
+/* ==============SOCIAL MEDIA LIST IN THE FOOTER============== */
 .social-list {
 	display: flex;
+
 	justify-content: center;
+	align-items: center;
 	gap: 16px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 112px;
+}
+@media screen and (min-width: 767px) {
+	.footer-social-media-wrraper {
+		margin-left: 24px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.footer-social-media-wrraper {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .social-list-link {
 	display: flex;
+
 	justify-content: center;
 	align-items: center;
 
@@ -822,6 +892,7 @@ body {
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
 	transition: background-color var(--transition-dur-and-func);
+	margin-bottom: 16px;
 }
 
 .social-list-link:hover,
@@ -832,7 +903,124 @@ body {
 	fill: var(--background-color);
 }
 
-/* Profile page */
+/* ========SUBSCRIPTION SUBMIT======== */
+@media screen and (min-width: 1200px) {
+	.subscription-btn {
+		margin-left: 80px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.subscription-btn {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+.subscription-btn {
+	display: flex;
+	flex-direction: column;
+}
+.footer-submit-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+	.footer-submit-form {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.subscribe {
+		margin-left: auto;
+	}
+}
+.subscribe {
+	font-family: "Roboto";
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+
+	margin-right: auto;
+}
+
+.submit-form-input {
+	align-items: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	width: 396px;
+	height: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 16px;
+
+	border: 1px solid;
+	color: rgba(255, 255, 255, 0.6);
+
+	border-color: rgba(255, 255, 255, 0.3);
+	outline: none;
+	border-radius: 4px;
+	background-color: transparent;
+	transition: border-color var(--transition-dur-and-func);
+}
+@media screen and (min-width: 264px) {
+	.submit-form-input {
+		width: 264px;
+	}
+}
+
+.submit-form-input::placeholder {
+	font-family: "Roboto";
+	font-size: 12px;
+	line-height: 2;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-form-input:focus {
+	outline: none;
+	border-color: var(--brand-color);
+}
+.submit-form-btn {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 165px;
+	height: 40px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 24px;
+
+	background-color: var(--brand-color);
+	border-radius: 4px;
+	border-color: transparent;
+	font-family: "Roboto";
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.5;
+
+	letter-spacing: 0.06em;
+	color: #ffffff;
+}
+.submit-form-btn::after {
+	content: "";
+	margin-left: 16px;
+	margin-right: 24px;
+	width: 24px;
+	height: 20px;
+
+	background-image: url(../images/icon-send.svg);
+}
+
+/* ==============PROFILE PAGE============== */
 .filters .item + .item {
 	margin-left: 24px;
 }
@@ -972,7 +1160,7 @@ body {
 .options-list-link:focus .overlay {
 	transform: translate(0, 0);
 }
-/* Modal Window */
+/* ==============PROFILE PAGE============== */
 .backdrop {
 	z-index: 100;
 	position: fixed;
@@ -1025,8 +1213,8 @@ body {
 
 .modal {
 	padding-top: 72px;
-	padding-left: 24px;
-	padding-right: 24px;
+	padding-left: 16px;
+	padding-right: 16px;
 	padding-bottom: 24px;
 	position: absolute;
 	top: 50%;
@@ -1039,7 +1227,7 @@ body {
 	background-color: #fff;
 }
 
-/* Submit form */
+/* ==============SUBMIT FORM============== */
 .appeal {
 	text-align: center;
 
@@ -1221,83 +1409,6 @@ body {
 	color: var(--white-color);
 }
 
-/* ========SUBSCRIPTION SUBMIT======== */
-.subscription-btn {
-	margin-left: 80px;
-}
-.footer-submit-form {
-	display: flex;
-	justify-content: center;
-	margin-top: 16px;
-}
-.subscribe {
-	font-family: "Roboto";
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.5;
-	letter-spacing: 0.02em;
-	color: #ffffff;
-}
-.submit-form-input {
-	align-items: center;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 16px;
-	width: 264px;
-	height: 40px;
-	margin-right: 24px;
-
-	border: 1px solid;
-	color: rgba(255, 255, 255, 0.6);
-
-	border-color: rgba(255, 255, 255, 0.3);
-	outline: none;
-	border-radius: 4px;
-	background-color: transparent;
-	transition: border-color var(--transition-dur-and-func);
-}
-
-.submit-form-input::placeholder {
-	font-family: "Roboto";
-	font-size: 12px;
-	line-height: 2;
-	letter-spacing: 0.04em;
-	color: rgba(255, 255, 255, 0.6);
-}
-
-.submit-form-input:focus {
-	outline: none;
-	border-color: var(--brand-color);
-}
-.submit-form-btn {
-	display: flex;
-	min-width: 168px;
-	height: 40px;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 24px;
-
-	background-color: var(--brand-color);
-	border-radius: 4px;
-	border-color: transparent;
-	font-family: "Roboto";
-
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 1.5;
-
-	letter-spacing: 0.06em;
-	color: #ffffff;
-}
-.submit-form-btn::after {
-	content: "";
-	margin-left: 16px;
-	margin-right: 24px;
-	width: 24px;
-	height: 20px;
-
-	background-image: url(../images/icon-send.svg);
-}
 .privacy-agreed {
 	color: var(--brand-color);
 }
